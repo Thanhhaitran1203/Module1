@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3 align="center">Chess Board using Nested For Loop</h3>
+    <div id="result" align="center"></div>
+    <script>
+        let result = `<table  width="700px"  cellPadding="10px" cellSpacing="0px" border="1px">`;
+        for (let i = 1; i <= 8; i++) {
+            result += `<tr>`
+            for (let j = 1; j <= 8; j++) {
+                let total = i + j;
+                if (total % 2 === 0){
+                    result += `<td height=70px width=30px bgcolor=#FFFFFF></td>`;
+                }else {
+                    result += `<td height=70px width=30px bgcolor=#000000></td>`;
+                }
+            }
+            result += `<tr>`;
+        }
+        result += `</table>`
+        document.getElementById("result").innerHTML = result;
+    </script>
+</body>
+</html>
